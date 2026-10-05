@@ -1,0 +1,379 @@
+/* =========================
+   VARIÁVEIS DO PROJETO
+========================= */
+
+:root {
+    --cor-primaria: #2E7D32;
+    --cor-primaria-clara: #66BB6A;
+    --cor-primaria-escura: #1B5E20;
+
+    --cor-secundaria: #FFB74D;
+    --cor-secundaria-clara: #FFE0B2;
+
+    --branco: #FFFFFF;
+    --fundo: #F5F5F5;
+    --texto: #333333;
+
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 40px;
+
+    --fonte-pequena: 12px;
+    --fonte-normal: 16px;
+    --fonte-media: 20px;
+    --fonte-grande: 28px;
+    --fonte-titulo: 36px;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-size: var(--fonte-normal);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    padding: var(--espaco-2) 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espaco-2);
+}
+
+header h1 {
+    font-size: var(--fonte-grande);
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--espaco-2);
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: var(--espaco-1);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria-clara);
+}
+
+nav a:focus {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    color: var(--cor-primaria-escura);
+    font-size: var(--fonte-titulo);
+    margin-bottom: var(--espaco-3);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background-color: var(--cor-secundaria-clara);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h2 {
+    color: var(--cor-primaria-escura);
+    font-size: var(--fonte-titulo);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto var(--espaco-3);
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+.botao:focus {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 3px;
+}
+
+.botao:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espaco-3);
+}
+
+.card {
+    background-color: var(--branco);
+    padding: var(--espaco-3);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--cor-primaria-escura);
+    font-size: var(--fonte-media);
+    margin: var(--espaco-2) 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: var(--espaco-2);
+    color: var(--cor-primaria-escura);
+    font-weight: bold;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--texto);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: var(--fonte-pequena);
+    font-weight: bold;
+}
+
+
+/* =========================
+   DOAÇÕES
+========================= */
+
+#doacoes {
+    background-color: var(--cor-primaria-clara);
+    text-align: center;
+    color: var(--branco);
+}
+
+#doacoes h2 {
+    color: var(--branco);
+}
+
+#doacoes .botao {
+    background-color: var(--branco);
+    color: var(--cor-primaria-escura);
+}
+
+#doacoes .botao:hover {
+    background-color: var(--cor-secundaria-clara);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: var(--cor-primaria-escura);
+    color: var(--branco);
+    text-align: center;
+    padding: var(--espaco-3) 0;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    header .container {
+        flex-direction: column;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--espaco-1);
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h2 {
+        font-size: var(--fonte-grande);
+    }
+
+    section h2 {
+        font-size: var(--fonte-grande);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    padding: var(--espaco-4);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form > div {
+    margin-bottom: var(--espaco-2);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--espaco-1);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: var(--fonte-normal);
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+input.erro,
+select.erro,
+textarea.erro {
+    border-color: #D32F2F;
+    background-color: #FFEBEE;
+}
+
+input.sucesso,
+select.sucesso,
+textarea.sucesso {
+    border-color: var(--cor-primaria);
+    background-color: #E8F5E9;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--espaco-1);
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+    font-size: var(--fonte-normal);
+}

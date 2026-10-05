@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Instituto Crescer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+
+            <h1>Instituto Crescer</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#sobre">Sobre nós</a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html">Projetos</a>
+                    </li>
+
+                    <li>
+                        <a href="cadastro.html">Cadastro</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#doacoes">Doações</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Conteúdo -->
+    <main>
+
+        <section>
+            <div class="container">
+
+                <h2>Cadastre-se</h2>
+
+                <p>
+                    Preencha o formulário abaixo para demonstrar
+                    seu interesse em participar das ações do
+                    Instituto Crescer.
+                </p>
+
+
+                <form id="formCadastro">
+
+                    <!-- Nome -->
+                    <div>
+                        <label for="nome">Nome completo</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- E-mail -->
+                    <div>
+                        <label for="email">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- Telefone -->
+                    <div>
+                        <label for="telefone">Telefone</label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                        >
+                    </div>
+
+
+                    <!-- Interesse -->
+                    <div>
+                        <label for="interesse">
+                            Área de interesse
+                        </label>
+
+                        <select id="interesse" name="interesse" required>
+
+                            <option value="">
+                                Selecione uma opção
+                            </option>
+
+                            <option value="voluntariado">
+                                Voluntariado
+                            </option>
+
+                            <option value="projetos">
+                                Participação em projetos
+                            </option>
+
+                            <option value="doacao">
+                                Doação
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <!-- Mensagem -->
+                    <div>
+                        <label for="mensagem">Mensagem</label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            placeholder="Digite sua mensagem"
+                        ></textarea>
+                    </div>
+
+
+                    <!-- Termos -->
+                    <div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="termos"
+                                name="termos"
+                                required
+                            >
+
+                            Concordo com o envio dos meus dados.
+                        </label>
+                    </div>
+
+
+                    <!-- Botão -->
+                    <button
+                        type="submit"
+                        class="botao"
+                    >
+                        Enviar cadastro
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+
+            <p>
+                &copy; 2026 Instituto Crescer.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>        
+</body>
+
+</html>
